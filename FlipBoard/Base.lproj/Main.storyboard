@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="70f-sf-vYz">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Flip Board View Controller-->
+        <!--Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="FlipBoardViewController" sceneMemberID="viewController">
@@ -17,23 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-z0-WOh">
-                                <rect key="frame" x="111" y="234" width="99" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="SvW-ob-cLm"/>
-                                    <constraint firstAttribute="width" constant="99" id="Yqs-bj-E3N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" backgroundImage="BoardFront"/>
-                                <connections>
-                                    <action selector="flip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LlP-Rg-0Eh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-tR-Jgc">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flips: 0" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-tR-Jgc">
                                 <rect key="frame" x="20" y="521" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Bhr-G2-yac"/>
                                     <constraint firstAttribute="width" constant="107" id="az5-D5-QHq"/>
@@ -44,14 +29,27 @@
                             </label>
                             <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-mm-3Tn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-z0-WOh">
+                                <rect key="frame" x="149" y="273" width="22" height="22"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" backgroundImage="BoardFront"/>
+                                <connections>
+                                    <action selector="flip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LlP-Rg-0Eh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-no-dHo">
+                                <rect key="frame" x="247" y="517" width="42" height="30"/>
+                                <state key="normal" title="Touch">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="IBQ-z0-WOh" firstAttribute="centerY" secondItem="llF-Gx-LjO" secondAttribute="centerY" constant="170" id="ApB-Gb-geD"/>
-                            <constraint firstItem="IBQ-z0-WOh" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="MGE-Fk-QCO"/>
                             <constraint firstItem="Xay-tR-Jgc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="dYB-ZQ-O9J"/>
                             <constraint firstItem="eEX-1p-elQ" firstAttribute="top" secondItem="Xay-tR-Jgc" secondAttribute="bottom" constant="26" id="ood-NE-fub"/>
                         </constraints>
@@ -59,6 +57,7 @@
                             <outletCollection property="gestureRecognizers" destination="lx1-60-MtW" appends="YES" id="DL1-63-wQR"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lEG-Bh-SP2"/>
                     <navigationItem key="navigationItem" id="xYT-bb-UiO"/>
                     <connections>
                         <outlet property="flipButton" destination="IBQ-z0-WOh" id="85t-4H-0e9"/>
@@ -73,11 +72,75 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-337" y="-144"/>
+            <point key="canvasLocation" x="-163" y="213"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nwY-5w-uGz">
+            <objects>
+                <tabBarController id="70f-sf-vYz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vNR-BJ-1mO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="IB4-Sp-LrX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tL8-DF-tm7" kind="relationship" relationship="viewControllers" id="A1K-hq-5gv"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="F83-j8-0Ib"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwK-16-Z9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="-139"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="thV-Tn-0qK">
+            <objects>
+                <tableViewController id="Q0g-Or-Qub" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oUW-ns-WxH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bBl-qA-IgN">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBl-qA-IgN" id="m9T-PV-INr">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q0g-Or-Qub" id="2hB-bn-NF6"/>
+                            <outlet property="delegate" destination="Q0g-Or-Qub" id="VSK-N2-mtP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="hWg-kS-KGs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grq-pk-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-441"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="acb-zc-oBO">
+            <objects>
+                <navigationController id="tL8-DF-tm7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eH7-xo-inp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RCN-o8-ArY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q0g-Or-Qub" kind="relationship" relationship="rootViewController" id="IM1-CK-Orc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKG-zv-hYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163" y="-441"/>
         </scene>
     </scenes>
     <resources>
-        <image name="BoardFront" width="512" height="512"/>
+        <image name="BoardFront" width="341" height="341"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
